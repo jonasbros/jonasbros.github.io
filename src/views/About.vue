@@ -1,9 +1,11 @@
 <template>
-  <div class="view__container about__container">
+  <section class="view__container about__container">
+    <NavBar />
+    
     <img class="page__title about__title" src="./../assets/ABOUT.svg" alt="ABOUT">
 
     <div class="about__copy">
-      <p>That being said, criteria of the edge of the constructive criticism seems to potentially change the paradigm of the questionable thesis. A solution might be in a combination of effective time management and content strategy The Network of Recent Communication.</p>
+      <p>I am a developer born and raised in the Philippines. My goal in life is to create the something that would make a difference and have a positive impact on the world.</p>
       <br>
       
       <p class="weight-is-semibold">Experience:</p>
@@ -19,42 +21,46 @@
       </ul>
       <br>
       
-      <p class="about__plug">I also do <a class="color-is-red weight-is-medium" href="#">voice over</a>!</p>
+      <!-- <p class="about__plug">I also do <a class="color-is-red weight-is-medium" href="#">voice over</a>!</p> -->
       <br>
     </div>
 
     <SiteFooter />
-  </div>
+  </section>
 </template>
 
 <script>
 import SiteFooter from './../components/SiteFooter.vue';
+import NavBar from './../components/NavBar.vue';
 
 export default {
     components: [
         SiteFooter,
+        NavBar
     ],
     data() {
       return {
         exp: [
           {
-            what: "IVR Developer at 3JK Scribes Experts Corp.",
-            when: "2019-Present"
+            what: "IVR Developer at VCloud Interactive",
+            when: "Dec 2018 - Present"
           },
           {
-            what: "Audio Specialist at 3JK Scribes Experts Corp.",
-            when: "2019-Present"
+            what: "Audio Specialist at VCloud Interactive",
+            when: "2019 - Present"
           },
           {
-            what: "QA Specialist at 3JK Scribes Experts Corp.",
-            when: "2018-2019"
+            what: "QA Specialist at VCloud Interactive",
+            when: "August 2018 - Dec 2018"
           },
         ],
         skills: [
           "HTML/CSS/JS",
           "Vue JS",
-          "ReactJS",
+          "PHP",
+          "MySQL",
           "Adobe Photoshop/Illustrator",
+          "Graphic Design",
         ]
       }
     }
@@ -68,25 +74,29 @@ export default {
   flex-flow: column nowrap;
 
   @media only screen and (min-width: 601px) {
-    padding-top: 292.5px;
+    padding-top: 395.5px;
   }
 
   @media only screen and (min-width: 768px) {
-    padding-top: 347.5px;
+    padding-top: 450.5px;
+  }
+
+  @media only screen and (min-width: 1536px) {
+    max-width: 1160px;    
   }
 
   @media only screen and (min-width: 1920px) {
-    padding-top: 357.5px;
+    padding-top: 460.5px;
     max-width: 1160px;
   }
 
   @media only screen and (min-width: 2560px) {
-    padding-top: 382.5px;
+    padding-top: 485.5px;
     max-width: 1440px;
   }
 
   @media only screen and (min-width: 3840px) {
-    padding-top: 622.5px;
+    padding-top: 725.5px;
     max-width: 2560px;
   }
 }

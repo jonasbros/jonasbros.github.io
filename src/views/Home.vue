@@ -1,10 +1,12 @@
 <template>
-  <div class="view__container">
+  <section class="view__container">
+    <!-- <NavBar /> -->
+    
     <img class="home__logo" src="./../assets/PingStudiosLogoBlack.svg" alt="Ping! Studios">
     
     <div class="home__copy">
       <p class="weight-is-semibold">
-        Hi, my name is <span class="color-is-red">Jonas</span> and I'm a <span class="color-is-red">frontend developer</span>
+        Hi, my name is <span class="color-is-red">Jonas</span> and I'm a <span class="color-is-red">web developer</span>
       </p>
     </div>
 
@@ -19,7 +21,7 @@
         <router-link to="contact" class="color-is-black hover-is-red">Contact</router-link>
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>

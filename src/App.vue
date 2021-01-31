@@ -1,17 +1,17 @@
 <template>
-    <router-view v-slot="{Component}">
-      <transition 
-        name="ayaya"
-        mode="out-in"
-        :duration="{enter: pageTransitionDuration, leave: pageTransitionDuration}"
-        enter-active-class="animate__animated animate__fadeIn"
-        leave-active-class="animate__animated animate__fadeOut"
-        @before-leave="beforeLeave($event)">
-          <keep-alive>
-            <component :is="Component"></component>
-          </keep-alive>
-      </transition>
-    </router-view>
+  <router-view v-slot="{Component}">
+    <transition 
+      name="ayaya"
+      mode="out-in"
+      :duration="{enter: pageTransitionDuration, leave: pageTransitionDuration}"
+      enter-active-class="animate__animated animate__fadeIn"
+      leave-active-class="animate__animated animate__fadeOut"
+      @before-leave="beforeLeave($event)">
+        <keep-alive>
+          <component :is="Component"></component>
+        </keep-alive>
+    </transition>
+  </router-view>
   
   <keep-alive>
     <PageTransition />
@@ -23,13 +23,14 @@
 <script>
 import Pointer from './components/Pointer.vue';
 import PageTransition from './components/PageTransition.vue';
-import { TimelineLite } from 'gsap';
-
+import NavBar from './components/NavBar.vue';
+import { gsap, TimelineLite } from 'gsap';
 
 export default {
   components: [
     Pointer,
     PageTransition,
+    NavBar
   ],
   data() {
     return {
@@ -40,6 +41,8 @@ export default {
     }
   },
   created() {
+    gsap.registerPlugin(TimelineLite);
+
     this.tl = new TimelineLite();
     
     this.sw = window.innerWidth;
@@ -109,6 +112,11 @@ body {
   background-size: 525%;
 }
 
+::selection {
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+}
+
 #app {
   // position: relative;
   font-family: Poppins, Helvetica, Arial, sans-serif;
@@ -136,7 +144,7 @@ body {
 
 .page__title {
     position: absolute;
-    top: 70px;
+    top: 158px;
     left: 50%;
     width: 123%;
     max-width: 1060px;
@@ -159,6 +167,7 @@ body {
     background-color: #b20000;
   }
 }
+
 
 .weight-is-bold {
   font-weight: 700;
@@ -192,9 +201,32 @@ body {
   transition: all 150ms linear;
 
   &:hover {
-    color: #b20000;
+    color: #b20000 !important;
     fill: #b20000;
     border-color: #b20000;
   }
+
+  &.is-svg {
+    &:hover {
+      background-color: #b20000;
+    }
+  }
 }
+
+.hover-is-black {
+  transition: all 150ms linear;
+
+  &:hover {
+    color: #000 !important;
+    fill: #000;
+    border-color: #000;
+  }
+
+  &.is-svg {
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
 </style>

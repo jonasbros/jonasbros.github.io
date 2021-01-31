@@ -4,11 +4,14 @@ import SiteFooter from './components/SiteFooter.vue';
 import SentModal from './components/SentModal.vue';
 import Pointer from './components/Pointer.vue';
 import PageTransition from './components/PageTransition.vue';
+import NavBar from './components/NavBar.vue';
+
 
 import router from './router';
 
 
 createApp(App)
+    .component('NavBar', NavBar)
     .component('PageTransition', PageTransition)
     .component('Pointer', Pointer)
     .component('SentModal', SentModal)

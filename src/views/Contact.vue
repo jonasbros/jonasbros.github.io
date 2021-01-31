@@ -1,5 +1,7 @@
 <template>
-  <div class="view__container contact__container">
+  <section class="view__container contact__container">
+    <NavBar />
+
     <img class="page__title contact__title" src="./../assets/CONTACT.svg" alt="ABOUT" v-if="!this.swOver(962)">
     <img class="page__title contact__title" src="./../assets/CONTACT2.svg" alt="ABOUT" v-else>
 
@@ -23,15 +25,16 @@
 
       <div class="contact__social">
         <p>Connect with me on social media:</p>
-        <a href="#"><img class="hover-is-red" src="./../assets/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img class="hover-is-red" src="./../assets/twitter.svg" alt="Twitter"></a>
-        <a href="#"><img class="hover-is-red" src="./../assets/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img class="hover-is-red is-svg" src="./../assets/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img class="hover-is-red is-svg" src="./../assets/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img class="hover-is-red is-svg" src="./../assets/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img class="hover-is-red is-svg" src="./../assets/github.svg" alt="Instagram"></a>
       </div>
     </div>
 
     <SentModal />
     <SiteFooter />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -171,16 +174,16 @@ export default {
     flex-flow: column nowrap;
 
     @media only screen and (min-width: 601px) {
-      padding-top: 292.5px;
+      padding-top: 395.5px;
     }
 
     @media only screen and (min-width: 768px) {
       max-width: 960px;
-      padding-top: 352.5px;
+      padding-top: 455.5px;
     }
 
     @media only screen and (min-width: 768px) {
-      padding-top: 332.5px;
+      padding-top: 435.5px;
       overflow: visible;
     }
 
@@ -190,7 +193,7 @@ export default {
 
     @media only screen and (min-width: 3840px) {
       max-width: 1600px;
-      padding-top: 482.5px;
+      padding-top: 585.5px;
 
     }
 

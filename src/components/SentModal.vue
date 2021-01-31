@@ -37,10 +37,12 @@ export default {
         }
 
         .sent__modal-content {
-            position: relative;
+            position: absolute;
             width: 300px;
             height: 175px;
-            margin: 55% auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: #fff;
             text-align: center;
             padding: 32px 40px;

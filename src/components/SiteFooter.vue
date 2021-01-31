@@ -2,26 +2,26 @@
     <footer>
           <ul class="footer__nav weight-is-semibold">
             <li>
-                <router-link to="/" class="color-is-black hover-is-red">Home</router-link>
+                <router-link to="/" :class="( $route.name == 'Home' ? 'link-is-disabled' : '' )" class="color-is-black hover-is-red">Home</router-link>
             </li>
             <li>
-                <router-link to="work" class="color-is-black hover-is-red">Work</router-link>
+                <router-link to="work" :class="( $route.name == 'Work' ? 'link-is-disabled' : '' )" class="color-is-black hover-is-red">Work</router-link>
             </li>
             <li>
-                <router-link to="about" class="color-is-black hover-is-red">About</router-link>
+                <router-link to="about" :class="( $route.name == 'About' ? 'link-is-disabled' : '' )" class="color-is-black hover-is-red">About</router-link>
             </li>
             <li>
-                <router-link to="contact" class="color-is-black hover-is-red">Contact</router-link>
+                <router-link to="contact" :class="( $route.name == 'Contact' ? 'link-is-disabled' : '' )" class="color-is-black hover-is-red">Contact</router-link>
             </li>
         </ul>
 
-        <p class="footer__copy">PING! Studios &copy; 2020</p>
+        <p class="footer__copy">PING! Studios &copy; 2021</p>
     </footer>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
 
@@ -78,19 +78,12 @@ export default {
     }
 
     .contact__container .footer__nav li, .contact__container .footer__copy { 
-        @media only screen and (min-width: 768px) {
-            font-size: 22px;
-        }
-
-        @media only screen and (min-width: 2560px) {
-            font-size: 24px;
-        }
-
-        
         @media only screen and (min-width: 3840px) {
             font-size: 32px;
         }
     }
 
-    
+    .link-is-disabled {
+        pointer-events: none;
+    }    
 </style>

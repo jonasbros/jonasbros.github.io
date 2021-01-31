@@ -1,16 +1,20 @@
 <template>
-    <div class="view__container work__container">
+    <section class="view__container work__container">
+        <NavBar />
+
         <img class="page__title work__title" src="./../assets/WORK.svg" alt="Work">
 
         <div class="work__item-container" v-for="(work, i) in works" :key="i">
-            <div class="work__picture" :style="{backgroundImage: `url(${work.picture})`}"></div>
+            <div class="work__picture" :style="{backgroundImage: `url(${work.picture})`}">
+                <a class="visit__site" :href="work.link" target="_blank"></a>
+            </div>
 
             <div class="work__info weight-is-semibold">
-                <p class="work__title">{{ work.title }}</p>
+                <a :href="work.link" class="work__title hover-is-red">{{ work.title }}</a>
                 <p class="work__role color-is-red">{{ work.role }}</p>
             </div>
 
-            <div class="work__copy">{{ work.copy }}</div>
+            <div class="work__copy" v-html="work.copy"></div>
 
             <div class="work__tech">
                 <p class="weight-is-semibold">Technologies used:</p>
@@ -19,10 +23,15 @@
                 </ul>
             </div>
         </div>
+        
+        <div class="work__github">
+            Check out my <a class="color-is-red weight-is-semibold" href="https://github.com/jonasbros" target="_blank">Github</a> for more!
+        </div>
 
         <SiteFooter />
-    </div>
+    </section>
 </template>
+
 <script>
 import SiteFooter from './../components/SiteFooter.vue';
 
@@ -40,53 +49,93 @@ export default {
         return {
             works: [
             {
-                picture: this.getWorkPicture('work-sample.jpg'),
-                title: "The Behavior of Sanctioned Environment",
+                picture: this.getWorkPicture('covid-chart-2.png'),
+                title: "Covid19 Stats Chart Tracker",
                 role: "Developer",
-                copy: "That being said, criteria of the edge of the constructive criticism seems to potentially change the paradigm of the questionable thesis. A solution might be in a combination of effective time management and content strategy The Network of Recent Communication (Karl Willett in The Book of the Primary Element)",
+                copy: "A stats tracker that can show both global and an individual nation's statistics using <a href='https://covid19api.com' class='color-is-red weight-is-semibold hover-is-black'>Covid19 API</a> as source the of data.",
+                link: "https://jonasbros.github.io/Covid19Stats/",
                 tech: [
                     'VUE3',
-                    'FIREBASE',
+                    'COVID19 API'
                 ]
             },
             {
-                picture: this.getWorkPicture('work-sample.jpg'),
-                title: "Network of Recent Communication",
-                role: "Designer",
-                copy: "In any case, any further consideration has a long history of The Perception of Revolutionary Hierarchy (Alonzo Fox in The Book of the Task Analysis)",
+                picture: this.getWorkPicture('ip-address-tracker.png'),
+                title: "IP Address Tracker",
+                role: "Developer",
+                copy: "An app that tracks the location of an inputted IP Address or Web Address. The design and project brief was from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+                link: "https://jonasbros.github.io/ip-address-tracker/",
                 tech: [
-                    'LUNACY',
-                    'ADOBE ILLUSTRATOR',
+                    'HTML, JS, BULMA',
+                    'Leaflet JS',
+                    'IPfy'
                 ]
             },
             {
-                picture: this.getWorkPicture('work-sample.jpg'),
-                title: "Network of Recent Communication",
-                role: "Designer",
-                copy: "In any case, any further consideration has a long history of The Perception of Revolutionary Hierarchy (Alonzo Fox in The Book of the Task Analysis)",
+                picture: this.getWorkPicture('rps-1.png'),
+                title: "Rock Paper Scissors Game",
+                role: "Developer",
+                copy: "A simple Rock, Paper, Scissors game that let's you play against the computer(not really :>). The design and project brief was also from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+                link: "https://jonasbros.github.io/RockPaperScissorsGame",
                 tech: [
-                    'LUNACY',
-                    'ADOBE ILLUSTRATOR',
+                    'VUE3',
                 ]
             },
             {
-                picture: this.getWorkPicture('work-sample.jpg'),
-                title: "Network of Recent Communication",
-                role: "Designer",
-                copy: "In any case, any further consideration has a long history of The Perception of Revolutionary Hierarchy (Alonzo Fox in The Book of the Task Analysis)",
+                picture: this.getWorkPicture('dbxmp-1.png'),
+                title: "Dropbox Music Player (DBXMP)",
+                role: "Developer",
+                copy: "A music player that uses Dropbox API to fetch only audio files from the logged in user's Dropbox and compile them into a single playlist.",
+                link: "https://jonasbros.github.io/dbxmp/",
                 tech: [
-                    'LUNACY',
-                    'ADOBE ILLUSTRATOR',
+                    'VUE2',
+                    'Dropbox API',
+                    'BULMA'
                 ]
             },
             {
-                picture: this.getWorkPicture('work-sample.jpg'),
-                title: "Network of Recent Communication",
-                role: "Designer",
-                copy: "In any case, any further consideration has a long history of The Perception of Revolutionary Hierarchy (Alonzo Fox in The Book of the Task Analysis)",
+                picture: this.getWorkPicture('gdmp-1.png'),
+                title: "Google Drive Music Player (GDMP)",
+                role: "Developer",
+                copy: "An upgraded version of DBXMP. I made this because I ran out of space on my Dropbox.",
+                link: "https://jonasbros.github.io/gdmp/",
                 tech: [
-                    'LUNACY',
-                    'ADOBE ILLUSTRATOR',
+                    'React JS',
+                    'Google/GDrive API',
+                    'BULMA',
+                ]
+            },
+            {
+                picture: this.getWorkPicture('card-component-1.png'),
+                title: "Simple Card Component",
+                role: "Developer",
+                copy: "Just a simple card component I made to keep my CSS sharp a little bit. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+                link: "https://jonasbros.github.io/CardComponent/",
+                tech: [
+                    'HTML',
+                    'CSS',
+                ]
+            },
+            {
+                picture: this.getWorkPicture('faq-accordion-1.png'),
+                title: "FAQ Accordion",
+                role: "Developer",
+                copy: "I also made this one to practice my CSS little bit. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+                link: "https://jonasbros.github.io/faq-accordion/",
+                tech: [
+                    'HTML',
+                    'CSS',
+                ]
+            },
+            {
+                picture: this.getWorkPicture('testimonies-grid-1.png'),
+                title: "FAQ Accordion",
+                role: "Developer",
+                copy: "Also for CSS practice. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+                link: "https://jonasbros.github.io/testimonies-grid/",
+                tech: [
+                    'HTML',
+                    'CSS',
                 ]
             },
             ]
@@ -97,7 +146,7 @@ export default {
 
 <style lang="scss">
     .view__container.work__container, .view__container.about__container {              
-        padding-top: 222.5px;
+        padding-top: 325.5px;
 
         @media only screen and (min-width: 601px) {
             padding-top: 292.5px;
@@ -105,7 +154,7 @@ export default {
         
         @media only screen and (min-width: 768px) {
             max-width: 960px;
-            padding-top: 352.5px;
+            padding-top: 455.5px;
         }
 
         @media only screen and (min-width: 800px) {
@@ -128,13 +177,34 @@ export default {
         }
 
         @media only screen and (min-width: 2560px) {
-            padding-top: 382.5px;
+            padding-top: 485.5px;
             max-width: 1920px;
         }
 
         @media only screen and (min-width: 3840px) {
-            padding-top: 622.5px;
+            padding-top: 675px;
             max-width: 2560px;
+        }
+
+        .work__github {
+            width: 100%;
+            margin: 25px 0 25px;
+
+            @media only screen and (min-width: 411px) {
+                font-size: 16px;
+            }
+
+            @media only screen and (min-width: 1920px) {
+                font-size: 18px;
+            }
+
+            @media only screen and (min-width: 2560px) {
+                font-size: 24px;
+            }
+
+            @media only screen and (min-width: 3840px) {
+                font-size: 34px;
+            }
         }
     }
 
@@ -187,6 +257,7 @@ export default {
         }
 
         .work__picture {
+            position: relative;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -195,6 +266,20 @@ export default {
             width: 100%;
             height: 300px;
             margin-bottom: 10px;
+            transition: filter 150ms linear;
+
+            &:hover {
+                filter: none;
+            }
+
+            .visit__site {
+                position: absolute;
+                top: 0;
+                left: 0%;
+                right: 0;
+                bottom: 0;
+                color: #FFF;
+            }
 
             @media only screen and (min-width: 768px) {
                 height: 340px;
@@ -215,6 +300,7 @@ export default {
             }
 
             .work__title {
+                color: #000;
                 text-align: left;
                 width: 70%;
             }
@@ -234,8 +320,7 @@ export default {
             li {
                 list-style: square inside;
             }
-        }
-        
+        }        
     }
 
 
