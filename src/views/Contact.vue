@@ -2,8 +2,9 @@
   <section class="view__container contact__container">
     <NavBar />
 
-    <img class="page__title contact__title" src="./../assets/CONTACT.svg" alt="ABOUT" v-if="!this.swOver(962)">
-    <img class="page__title contact__title" src="./../assets/CONTACT2.svg" alt="ABOUT" v-else>
+    <img class="page__title contact__title" src="./../assets/CONTACT2.svg" alt="ABOUT" v-if="this.swOver(1024)">
+    <img class="page__title contact__title" src="./../assets/CONTACT.svg" alt="ABOUT" v-else>
+
 
 
     <div>
@@ -25,10 +26,9 @@
 
       <div class="contact__social">
         <p>Connect with me on social media:</p>
-        <a href="#"><img class="hover-is-red is-svg" src="./../assets/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img class="hover-is-red is-svg" src="./../assets/twitter.svg" alt="Twitter"></a>
-        <a href="#"><img class="hover-is-red is-svg" src="./../assets/instagram.svg" alt="Instagram"></a>
-        <a href="#"><img class="hover-is-red is-svg" src="./../assets/github.svg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCp_mfqGTCb-vm0xxFbjz9Og" target="_blank"><img class="hover-is-red is-svg" src="./../assets/youtube.svg" alt="Youtube"></a>
+        <a href="https://www.instagram.com/1jonasperez" target="_blank"><img class="hover-is-red is-svg" src="./../assets/instagram.svg" alt="Instagram"></a>
+        <a href="https://github.com/jonasbros" target="_blank"><img class="hover-is-red is-svg" src="./../assets/github.svg" alt="Instagram"></a>
       </div>
     </div>
 
@@ -173,18 +173,18 @@ export default {
     justify-content: space-between;
     flex-flow: column nowrap;
 
-    @media only screen and (min-width: 601px) {
-      padding-top: 395.5px;
-    }
+    // @media only screen and (min-width: 601px) {
+    //   padding-top: 395.5px;
+    // }
 
     @media only screen and (min-width: 768px) {
       max-width: 960px;
-      padding-top: 455.5px;
+      overflow: visible;
+      // padding-top: 455.5px;
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
       padding-top: 435.5px;
-      overflow: visible;
     }
 
     @media only screen and (min-width: 2560px) {
@@ -195,6 +195,23 @@ export default {
       max-width: 1600px;
       padding-top: 585.5px;
 
+    }
+
+    //max-width
+    @media only screen and (max-width: 1024px) {
+        padding-top: 335.5px;
+    }
+
+    @media only screen and (max-width: 601px) {
+        padding-top: 315.5px;
+    }
+
+    @media only screen and (max-width: 425px) {
+        padding-top: 255.5px;
+    }
+
+    @media only screen and (max-width: 375px) {
+        padding-top: 235.5px;
     }
 
   }

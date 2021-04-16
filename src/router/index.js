@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from './../views/Home';
 import Work from './../views/Work';
 import About from './../views/About';
@@ -40,7 +40,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes,
   scrollBehavior() {
     setTimeout( () => {
@@ -53,6 +53,17 @@ router.afterEach((to) => {
   if (to.meta && to.meta.title) {
     document.title = to.meta.title;
   }
+
+  let nav = document.querySelector('nav');
+  let hamburger_menu = document.querySelector('.hamburger');
+  let close = document.querySelector('.close');
+
+  setTimeout(() => {
+    close.classList.add('active');
+    hamburger_menu.classList.remove('active');
+    nav.classList.remove('mobile__active');
+    nav.classList.remove('fadeout');
+  }, 1000);
 });
 
 export default router;

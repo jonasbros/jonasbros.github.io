@@ -5,7 +5,7 @@
     <img class="page__title about__title" src="./../assets/ABOUT.svg" alt="ABOUT">
 
     <div class="about__copy">
-      <p>I am a developer born and raised in the Philippines. My goal in life is to create the something that would make a difference and have a positive impact on the world.</p>
+      <p v-html="about"></p>
       <br>
       
       <p class="weight-is-semibold">Experience:</p>
@@ -40,6 +40,7 @@ export default {
     ],
     data() {
       return {
+        about: 'I am a developer born and raised in the Philippines. My goal in life is to create the something that would make a difference and have a positive impact on the world. I love listening to music, playing video games, and playing guitar in my spare time. I\'ve reached <a href="https://www.dotabuff.com/players/108526230" target="_blank" class="weight-is-semibold hover-is-red color-is-black">Immortal</a> rank in Dota2 😎. ',
         exp: [
           {
             what: "IVR Developer at VCloud Interactive",
@@ -73,12 +74,16 @@ export default {
   justify-content: space-between;
   flex-flow: column nowrap;
 
-  @media only screen and (min-width: 601px) {
-    padding-top: 395.5px;
-  }
+  // @media only screen and (min-width: 601px) {
+  //   padding-top: 395.5px;
+  // }
 
-  @media only screen and (min-width: 768px) {
-    padding-top: 450.5px;
+  // @media only screen and (min-width: 768px) {
+  //   padding-top: 450.5px;
+  // }
+
+  @media only screen and (min-width: 1025px) {
+      padding-top: 405.5px;
   }
 
   @media only screen and (min-width: 1536px) {
@@ -98,6 +103,23 @@ export default {
   @media only screen and (min-width: 3840px) {
     padding-top: 725.5px;
     max-width: 2560px;
+  }
+
+  //max-width
+  @media only screen and (max-width: 1024px) {
+      padding-top: 375.5px;
+  }
+
+  @media only screen and (max-width: 601px) {
+      padding-top: 325.5px;
+  }
+
+  @media only screen and (max-width: 425px) {
+      padding-top: 255.5px;
+  }
+
+  @media only screen and (max-width: 375px) {
+      padding-top: 235.5px;
   }
 }
 

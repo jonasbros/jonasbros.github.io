@@ -46,7 +46,7 @@ export default {
     this.tl = new TimelineLite();
     
     this.sw = window.innerWidth;
-    if( this.sw >= 1920 ) {
+    if( this.sw > 1920 ) {
       this.pingTransitionScale = 600;
     }
   },
@@ -149,6 +149,10 @@ body {
     width: 123%;
     max-width: 1060px;
     transform: translateX(-49.6%);
+
+    @media only screen and (max-width: 1024px) {
+      top: 100px;
+    }
 }
 
 .btn {

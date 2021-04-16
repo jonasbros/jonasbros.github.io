@@ -12,6 +12,7 @@
     "emailjs-com": "^2.6.3",
     "gsap": "^3.5.1",
     "vue": "^3.0.0",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {

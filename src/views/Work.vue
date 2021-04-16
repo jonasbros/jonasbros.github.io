@@ -49,6 +49,17 @@ export default {
         return {
             works: [
             {
+                picture: this.getWorkPicture('bolg2-1.png'),
+                title: "Bolg",
+                role: "Developer",
+                copy: "A very simple blog website with comments and likes :).",
+                link: "https://jonasbros.github.io/bolg2/",
+                tech: [
+                    'VUE.JS (QUASAR FRAMEWORK)',
+                    'FIREBASE FIRESTORE + AUTH',
+                ]
+            },
+            {
                 picture: this.getWorkPicture('covid-chart-2.png'),
                 title: "Covid19 Stats Chart Tracker",
                 role: "Developer",
@@ -56,6 +67,7 @@ export default {
                 link: "https://jonasbros.github.io/Covid19Stats/",
                 tech: [
                     'VUE3',
+                    'CHARTJS',
                     'COVID19 API'
                 ]
             },
@@ -105,39 +117,39 @@ export default {
                     'BULMA',
                 ]
             },
-            {
-                picture: this.getWorkPicture('card-component-1.png'),
-                title: "Simple Card Component",
-                role: "Developer",
-                copy: "Just a simple card component I made to keep my CSS sharp a little bit. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
-                link: "https://jonasbros.github.io/CardComponent/",
-                tech: [
-                    'HTML',
-                    'CSS',
-                ]
-            },
-            {
-                picture: this.getWorkPicture('faq-accordion-1.png'),
-                title: "FAQ Accordion",
-                role: "Developer",
-                copy: "I also made this one to practice my CSS little bit. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
-                link: "https://jonasbros.github.io/faq-accordion/",
-                tech: [
-                    'HTML',
-                    'CSS',
-                ]
-            },
-            {
-                picture: this.getWorkPicture('testimonies-grid-1.png'),
-                title: "FAQ Accordion",
-                role: "Developer",
-                copy: "Also for CSS practice. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
-                link: "https://jonasbros.github.io/testimonies-grid/",
-                tech: [
-                    'HTML',
-                    'CSS',
-                ]
-            },
+            // {
+            //     picture: this.getWorkPicture('card-component-1.png'),
+            //     title: "Simple Card Component",
+            //     role: "Developer",
+            //     copy: "Just a simple card component I made to keep my CSS sharp a little bit. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+            //     link: "https://jonasbros.github.io/CardComponent/",
+            //     tech: [
+            //         'HTML',
+            //         'CSS',
+            //     ]
+            // },
+            // {
+            //     picture: this.getWorkPicture('faq-accordion-1.png'),
+            //     title: "FAQ Accordion",
+            //     role: "Developer",
+            //     copy: "I also made this one to practice my CSS little bit. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+            //     link: "https://jonasbros.github.io/faq-accordion/",
+            //     tech: [
+            //         'HTML',
+            //         'CSS',
+            //     ]
+            // },
+            // {
+            //     picture: this.getWorkPicture('testimonies-grid-1.png'),
+            //     title: "FAQ Accordion",
+            //     role: "Developer",
+            //     copy: "Also for CSS practice. Design and project brief from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
+            //     link: "https://jonasbros.github.io/testimonies-grid/",
+            //     tech: [
+            //         'HTML',
+            //         'CSS',
+            //     ]
+            // },
             ]
         }
     }
@@ -148,22 +160,22 @@ export default {
     .view__container.work__container, .view__container.about__container {              
         padding-top: 325.5px;
 
-        @media only screen and (min-width: 601px) {
-            padding-top: 292.5px;
-        }
+        // @media only screen and (min-width: 601px) {
+        //     padding-top: 292.5px;
+        // }
         
         @media only screen and (min-width: 768px) {
             max-width: 960px;
-            padding-top: 455.5px;
+            // padding-top: 455.5px;
         }
 
         @media only screen and (min-width: 800px) {
             max-width: 1060px;
         }
 
-        // @media only screen and (min-width: 1440px) {
-        //     max-width: 1060px;
-        // }
+        @media only screen and (min-width: 1024px) {
+            padding-top: 455.5px;
+        }
     
         @media only screen and (min-width: 1536px) {
             display: flex;
@@ -184,6 +196,23 @@ export default {
         @media only screen and (min-width: 3840px) {
             padding-top: 675px;
             max-width: 2560px;
+        }
+
+        //max-width
+        @media only screen and (max-width: 1024px) {
+            padding-top: 405.5px;
+        }
+
+        @media only screen and (max-width: 601px) {
+            padding-top: 325.5px;
+        }
+
+        @media only screen and (max-width: 425px) {
+            padding-top: 255.5px;
+        }
+
+        @media only screen and (max-width: 375px) {
+            padding-top: 235.5px;
         }
 
         .work__github {
@@ -260,7 +289,7 @@ export default {
             position: relative;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top center;
             background-color: lightgrey;
             filter: sepia(5%) grayscale(80%);
             width: 100%;

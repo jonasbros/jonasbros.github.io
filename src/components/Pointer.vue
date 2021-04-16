@@ -54,8 +54,8 @@ export default {
         z-index: 3;
 
         @media only screen and (min-width: 1920px) {
-            height: 25px;
-            width: 25px;
+            height: 15px;
+            width: 15px;
         }
 
         
@@ -84,11 +84,11 @@ export default {
             border-radius: 69%;
 
             @media only screen and (min-width: 1920px) {
-                height: 20px;
-                width: 20px;
+                height: 15px;
+                width: 15px;
                 top: -2px;
                 left: -2px;
-                border-width: 5px;
+                border-width: 2px;
             }
 
             @media only screen and (min-width: 3840px) {
