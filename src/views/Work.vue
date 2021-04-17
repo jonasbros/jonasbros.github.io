@@ -52,7 +52,7 @@ export default {
                 picture: this.getWorkPicture('bolg2-1.png'),
                 title: "Bolg",
                 role: "Developer",
-                copy: "A very simple blog website with comments and likes :).",
+                copy: "A very simple blog website with comments and likes :). (SEO/SSR mode coming soon™)",
                 link: "https://jonasbros.github.io/bolg2/",
                 tech: [
                     'VUE.JS (QUASAR FRAMEWORK)',
