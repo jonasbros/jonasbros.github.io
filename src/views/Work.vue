@@ -49,6 +49,18 @@ export default {
         return {
             works: [
             {
+                picture: this.getWorkPicture('cheesemax2.png'),
+                title: "Cheesemax",
+                role: "Developer",
+                copy: "Simple chat app for the mars. Created for the purpose of learning React as well as Tailwind CSS. Tailwind is actually pretty good. I understand why I see it everywhere now. :)",
+                link: "https://jonasbros.github.io/cheesemax/",
+                tech: [
+                    'REACT',
+                    'FIREBASE FIRESTORE + AUTH',
+                    'TAILWIND CSS',
+                ]
+            },
+            {
                 picture: this.getWorkPicture('bolg2-1.png'),
                 title: "Bolg",
                 role: "Developer",
