@@ -52,12 +52,13 @@ export default {
                 picture: this.getWorkPicture('cheesemax2.png'),
                 title: "Cheesemax",
                 role: "Developer",
-                copy: "Simple chat app for the mars. Created for the purpose of learning React as well as Tailwind CSS. Tailwind is actually pretty good. I understand why I see it everywhere now. :)",
+                copy: "Simple chat app for the mars. Created for the purpose of learning <span class='color-is-red weight-is-semibold'>React</span>, <span class='color-is-red weight-is-semibold'>Typescript</span>, as well as <span class='color-is-red weight-is-semibold'>Tailwind CSS</span>. Tailwind is actually pretty good. I understand why I see it everywhere now. :)",
                 link: "https://jonasbros.github.io/cheesemax/",
                 tech: [
-                    'REACT',
-                    'FIREBASE FIRESTORE + AUTH',
-                    'TAILWIND CSS',
+                    'React',
+                    'Typescript',
+                    'Firebase Firestore + Auth',
+                    'Tailwind CSS',
                 ]
             },
             {
@@ -67,8 +68,8 @@ export default {
                 copy: "A very simple blog website with comments and likes :). (SEO/SSR mode coming soon™)",
                 link: "https://jonasbros.github.io/bolg2/",
                 tech: [
-                    'VUE.JS (QUASAR FRAMEWORK)',
-                    'FIREBASE FIRESTORE + AUTH',
+                    'VueJS (Quasar UI Framework)',
+                    'Firebase Firestore + Auth',
                 ]
             },
             {
@@ -78,8 +79,8 @@ export default {
                 copy: "A stats tracker that can show both global and an individual nation's statistics using <a href='https://covid19api.com' class='color-is-red weight-is-semibold hover-is-black'>Covid19 API</a> as source the of data.",
                 link: "https://jonasbros.github.io/Covid19Stats/",
                 tech: [
-                    'VUE3',
-                    'CHARTJS',
+                    'VueJS',
+                    'ChartS',
                     'COVID19 API'
                 ]
             },
@@ -90,7 +91,7 @@ export default {
                 copy: "An app that tracks the location of an inputted IP Address or Web Address. The design and project brief was from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
                 link: "https://jonasbros.github.io/ip-address-tracker/",
                 tech: [
-                    'HTML, JS, BULMA',
+                    'HTML, JS, Bulma',
                     'Leaflet JS',
                     'IPfy'
                 ]
@@ -102,7 +103,7 @@ export default {
                 copy: "A simple Rock, Paper, Scissors game that let's you play against the computer(not really :>). The design and project brief was also from <a href='https://www.frontendmentor.io/' class='color-is-red weight-is-semibold hover-is-black'>Frontend Mentor</a>.",
                 link: "https://jonasbros.github.io/RockPaperScissorsGame",
                 tech: [
-                    'VUE3',
+                    'VueJS',
                 ]
             },
             {
@@ -112,9 +113,9 @@ export default {
                 copy: "A music player that uses Dropbox API to fetch only audio files from the logged in user's Dropbox and compile them into a single playlist.",
                 link: "https://jonasbros.github.io/dbxmp/",
                 tech: [
-                    'VUE2',
+                    'VueJS',
                     'Dropbox API',
-                    'BULMA'
+                    'Bulma'
                 ]
             },
             {
@@ -124,9 +125,9 @@ export default {
                 copy: "An upgraded version of DBXMP. I made this because I ran out of space on my Dropbox.",
                 link: "https://jonasbros.github.io/gdmp/",
                 tech: [
-                    'React JS',
+                    'React',
                     'Google/GDrive API',
-                    'BULMA',
+                    'Bulma',
                 ]
             },
             // {
